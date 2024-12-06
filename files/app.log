@@ -170,3 +170,173 @@ Traceback (most recent call last):
   File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 22, in connection_db
     result = cursor.execute(query).fetchall()
 sqlite3.IntegrityError: UNIQUE constraint failed: items.name
+2024-12-07 00:28:48,320 - ERROR - Error in clean_console: system() takes 0 positional arguments but 1 was given
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 32, in clean_console
+    system('cls')
+TypeError: system() takes 0 positional arguments but 1 was given
+2024-12-07 00:28:48,320 - ERROR - Error in main: system() takes 0 positional arguments but 1 was given
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 32, in main
+    clean_console()
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 32, in clean_console
+    system('cls')
+TypeError: system() takes 0 positional arguments but 1 was given
+2024-12-07 00:39:23,018 - ERROR - Error in main: 'str' object has no attribute 'isfloat'
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 45, in main
+    if item_price.isfloat() or item_price.isdigit():
+AttributeError: 'str' object has no attribute 'isfloat'
+2024-12-07 00:52:50,030 - ERROR - Error in connection_db: UNIQUE constraint failed: items.name
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 23, in connection_db
+    result = cursor.execute(query).fetchall()
+sqlite3.IntegrityError: UNIQUE constraint failed: items.name
+2024-12-07 00:57:09,742 - ERROR - Error in main: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 47, in main
+    item_get_once = get_item_by_name(item_name)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\crud.py", line 24, in get_item_by_name
+    return connection_db(query)[0]
+IndexError: list index out of range
+2024-12-07 00:57:47,286 - ERROR - Error in main: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 47, in main
+    item_get_once = get_item_by_name(item_name)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\crud.py", line 24, in get_item_by_name
+    return connection_db(query)[0]
+IndexError: list index out of range
+2024-12-07 01:07:35,141 - ERROR - Error in connection_db: UNIQUE constraint failed: items.name
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 23, in connection_db
+    result = cursor.execute(query).fetchall()
+sqlite3.IntegrityError: UNIQUE constraint failed: items.name
+2024-12-07 01:08:32,737 - ERROR - Error in main: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 69, in main
+    for k in get_all_items():
+TypeError: 'NoneType' object is not iterable
+2024-12-07 01:22:45,284 - ERROR - Error in main: Invalid value for header. Must be True or False.
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 627, in _validate_true_or_false
+    assert val in (True, False)
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 71, in main
+    table.header = [('id', 'name', 'slug', 'price',
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 986, in header
+    self._validate_option("header", val)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 534, in _validate_option
+    self._validate_true_or_false(option, val)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 630, in _validate_true_or_false
+    raise ValueError(msg)
+ValueError: Invalid value for header. Must be True or False.
+2024-12-07 01:24:34,864 - ERROR - Error in main: Invalid value for header. Must be True or False.
+Traceback (most recent call last):
+  File "c:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 627, in _validate_true_or_false
+    assert val in (True, False)
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 71, in main
+    table.header = [('id', 'name', 'slug', 'price',
+  File "c:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 986, in header
+    self._validate_option("header", val)
+  File "c:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 534, in _validate_option
+    self._validate_true_or_false(option, val)
+  File "c:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 630, in _validate_true_or_false
+    raise ValueError(msg)
+ValueError: Invalid value for header. Must be True or False.
+2024-12-07 01:25:04,104 - ERROR - Error in main: Invalid value for header. Must be True or False.
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 627, in _validate_true_or_false
+    assert val in (True, False)
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 71, in main
+    table.header = ('id', 'name', 'slug', 'price', 'is_deleted')
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 986, in header
+    self._validate_option("header", val)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 534, in _validate_option
+    self._validate_true_or_false(option, val)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 630, in _validate_true_or_false
+    raise ValueError(msg)
+ValueError: Invalid value for header. Must be True or False.
+2024-12-07 01:25:40,656 - ERROR - Error in main: can't set attribute 'rows'
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 72, in main
+    table.rows = get_all_items()
+AttributeError: can't set attribute 'rows'
+2024-12-07 01:26:09,192 - ERROR - Error in main: can't set attribute 'rows'
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 73, in main
+    table.rows = k
+AttributeError: can't set attribute 'rows'
+2024-12-07 01:26:44,419 - ERROR - Error in main: can't set attribute 'rows'
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 73, in main
+    table.rows = list(k)
+AttributeError: can't set attribute 'rows'
+2024-12-07 01:53:12,345 - ERROR - Error in connection_db: UNIQUE constraint failed: items.name
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 23, in connection_db
+    result = cursor.execute(query).fetchall()
+sqlite3.IntegrityError: UNIQUE constraint failed: items.name
+2024-12-07 01:53:12,345 - ERROR - Error in change_item_name_by_name: UNIQUE constraint failed: items.name
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\crud.py", line 48, in change_item_name_by_name
+    return connection_db(query)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 23, in connection_db
+    result = cursor.execute(query).fetchall()
+sqlite3.IntegrityError: UNIQUE constraint failed: items.name
+2024-12-07 02:02:43,660 - ERROR - Error in main: object of type 'function' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 100, in main
+    while len(get_item_by_name) == 0:
+TypeError: object of type 'function' has no len()

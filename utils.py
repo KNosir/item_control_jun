@@ -2,6 +2,7 @@ from os import system
 from hashlib import sha256
 import sqlite3
 from logger import log_call
+import platform
 
 
 SALT = '_real_salt_'
@@ -24,6 +25,18 @@ def connection_db(query):
     conn.close()
     return result
 
+
 @log_call
 def clean_console() -> None:
-    system('cls')
+    if platform.system() == 'Windows':
+        system('cls')
+    else:
+        system('clear')
+
+
+@log_call
+def press_key() -> None:
+    input('\n\nPress any key to continue......')
+    return None
+
+

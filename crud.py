@@ -5,8 +5,74 @@ from logger import log_call
 @log_call
 def create_item(item_name: str, price: int) -> bool:
     slug = item_name.replace(' ', '_')
-    query = f'''INSERT INTO items(name,slug,price) 
+    query = f'''INSERT INTO items(name,slug,price)
         VALUES ('{item_name}','{slug}',{price})'''
+    try:
+        connection_db(query)
+        return True
+    except:
+        return False
+
+
+@log_call
+def get_item_by_id(id: int) -> tuple:
+    query = f'''select * from items where id={id} and is_deleted=0'''
+    return connection_db(query)[0]
+
+
+@log_call
+def get_item_by_name(name: str) -> tuple | None:
+    query = f'''select * from items where name='{name}'  '''
+    return connection_db(query)
+
+
+@log_call
+def get_all_items() -> list:
+    query = 'SELECT * FROM items where is_deleted=0'
+    return connection_db(query)
+
+
+@log_call
+def get_all_item_sum() -> list:
+    query = 'select sum(price) as amount from items where is_deleted=0'
+    return connection_db(query)
+
+
+@log_call
+def change_item_name_by_name(old_name, new_name) -> bool:
+    query = f'''
+    update items
+    set name = '{new_name}'
+    where name = '{old_name}'
+    '''
+    try:
+        connection_db(query)
+        return True
+    except:
+        return False
+
+
+@log_call
+def change_item_price_by_name(item_name, new_price) -> bool:
+    query = f'''
+    update items
+    set price = {new_price}
+    where name = '{item_name}'
+    '''
+    try:
+        connection_db(query)
+        return True
+    except:
+        return False
+
+
+@log_call
+def delete_item_with_name(item_name) -> bool:
+    query = f'''
+    update items
+    set is_deleted = 0
+    where name = '{item_name}'
+    '''
     try:
         connection_db(query)
         return True
