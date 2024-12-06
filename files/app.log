@@ -1,0 +1,172 @@
+2024-12-06 22:37:18,886 - INFO - Calling make_erro with args: (2, 0) and kwargs: {}
+2024-12-06 22:37:18,886 - ERROR - Error in make_erro: division by zero
+Traceback (most recent call last):
+  File "c:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logs\logger.py", line 17, in wrapper
+    result = func(*args, **kwargs)
+  File "c:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 8, in make_erro
+    return a/b
+ZeroDivisionError: division by zero
+2024-12-06 23:24:23,801 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:24:23,801 - INFO - create_user returned: None
+2024-12-06 23:24:46,335 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:24:46,335 - INFO - create_user returned: None
+2024-12-06 23:25:48,422 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:25:48,422 - INFO - create_user returned: None
+2024-12-06 23:25:59,122 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:25:59,122 - INFO - create_user returned: None
+2024-12-06 23:26:28,731 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:26:28,731 - ERROR - Error in create_user: unable to open database file
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 17, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\auth.py", line 20, in create_user
+    return connection_db(query)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 16, in connection_db
+    conn = sqlite3.connect('database/data.db')
+sqlite3.OperationalError: unable to open database file
+2024-12-06 23:27:18,166 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:27:18,167 - ERROR - Error in create_user: table users has 3 columns but 2 values were supplied
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 17, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\auth.py", line 20, in create_user
+    return connection_db(query)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 18, in connection_db
+    result = cursor.execute(query)
+sqlite3.OperationalError: table users has 3 columns but 2 values were supplied
+2024-12-06 23:28:25,587 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:28:25,588 - INFO - create_user returned: <sqlite3.Cursor object at 0x0000022D6DCEA840>
+2024-12-06 23:28:59,263 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:28:59,267 - ERROR - Error in create_user: UNIQUE constraint failed: users.username
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 17, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\auth.py", line 20, in create_user
+    return connection_db(query)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 18, in connection_db
+    result = cursor.execute(query)
+sqlite3.IntegrityError: UNIQUE constraint failed: users.username
+2024-12-06 23:29:53,272 - INFO - Calling create_user with args: ('test', 'test') and kwargs: {}
+2024-12-06 23:29:53,272 - INFO - create_user returned: None
+2024-12-06 23:29:58,661 - INFO - Calling create_user with args: ('test2', 'test') and kwargs: {}
+2024-12-06 23:29:58,676 - INFO - create_user returned: <sqlite3.Cursor object at 0x000001F6B70CA840>
+2024-12-06 23:32:19,129 - INFO - Calling get_user with args: ('asdf',) and kwargs: {}
+2024-12-06 23:32:19,129 - ERROR - Error in get_user: no such column: asdf
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 17, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\auth.py", line 13, in get_user
+    return connection_db(query).fetchone()
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 18, in connection_db
+    result = cursor.execute(query)
+sqlite3.OperationalError: no such column: asdf
+2024-12-06 23:32:57,769 - INFO - Calling get_user with args: ('asdf',) and kwargs: {}
+2024-12-06 23:32:57,769 - INFO - get_user returned: None
+2024-12-06 23:33:04,533 - INFO - Calling get_user with args: ('test',) and kwargs: {}
+2024-12-06 23:33:04,533 - INFO - get_user returned: None
+2024-12-06 23:33:14,456 - INFO - Calling get_user with args: ('test',) and kwargs: {}
+2024-12-06 23:33:14,456 - INFO - get_user returned: None
+2024-12-06 23:33:29,824 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:33:29,824 - INFO - get_user returned: None
+2024-12-06 23:34:28,738 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:34:28,738 - INFO - get_user returned: None
+2024-12-06 23:35:13,377 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:35:13,377 - INFO - get_user returned: <sqlite3.Cursor object at 0x000002CC027CA840>
+2024-12-06 23:35:20,643 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:35:20,643 - INFO - get_user returned: None
+2024-12-06 23:35:39,361 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:35:39,361 - INFO - get_user returned: None
+2024-12-06 23:35:48,878 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:35:48,878 - ERROR - Error in get_user: Cannot operate on a closed database.
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 17, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\auth.py", line 14, in get_user
+    print(result.fetchall())
+sqlite3.ProgrammingError: Cannot operate on a closed database.
+2024-12-06 23:36:21,500 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:36:21,500 - INFO - get_user returned: None
+2024-12-06 23:36:40,888 - INFO - Calling get_user with args: ('asdf',) and kwargs: {}
+2024-12-06 23:36:40,890 - INFO - get_user returned: []
+2024-12-06 23:36:47,537 - INFO - Calling get_user with args: ('test',) and kwargs: {}
+2024-12-06 23:36:47,537 - INFO - get_user returned: [(1, 'test', 'test')]
+2024-12-06 23:36:55,731 - INFO - Calling get_user with args: ('test',) and kwargs: {}
+2024-12-06 23:36:55,731 - INFO - get_user returned: (1, 'test', 'test')
+2024-12-06 23:39:57,935 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:39:57,935 - INFO - Calling connection_db with args: ("\n    select * from users where username='test2'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:39:57,936 - INFO - connection_db returned: [(2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')]
+2024-12-06 23:39:57,936 - INFO - get_user returned: (2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')
+2024-12-06 23:39:57,936 - INFO - Calling hash_maker with args: ('test',) and kwargs: {}
+2024-12-06 23:39:57,936 - INFO - hash_maker returned: e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c
+2024-12-06 23:43:23,783 - INFO - Calling get_user with args: ('Nosir',) and kwargs: {}
+2024-12-06 23:43:23,784 - INFO - Calling connection_db with args: ("\n    select * from users where username='Nosir'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:43:23,788 - INFO - connection_db returned: []
+2024-12-06 23:43:23,789 - INFO - get_user returned: None
+2024-12-06 23:44:09,949 - INFO - Calling get_user with args: ('Nosir',) and kwargs: {}
+2024-12-06 23:44:09,950 - INFO - Calling connection_db with args: ("\n    select * from users where username='Nosir'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:44:09,954 - INFO - connection_db returned: []
+2024-12-06 23:44:09,954 - INFO - get_user returned: None
+2024-12-06 23:45:16,877 - INFO - Calling get_user with args: ('asdf',) and kwargs: {}
+2024-12-06 23:45:16,877 - INFO - Calling connection_db with args: ("\n    select * from users where username='asdf'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:45:16,877 - INFO - connection_db returned: []
+2024-12-06 23:45:16,877 - INFO - get_user returned: None
+2024-12-06 23:52:44,876 - INFO - Calling get_user with args: ('from os import system',) and kwargs: {}
+2024-12-06 23:52:44,877 - INFO - Calling connection_db with args: ("\n    select * from users where username='from os import system'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:52:44,935 - INFO - connection_db returned: []
+2024-12-06 23:52:44,936 - INFO - get_user returned: None
+2024-12-06 23:52:44,944 - INFO - Calling get_user with args: ('def clean_console():',) and kwargs: {}
+2024-12-06 23:52:44,944 - INFO - Calling connection_db with args: ("\n    select * from users where username='def clean_console():'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:52:44,945 - INFO - connection_db returned: []
+2024-12-06 23:52:44,945 - INFO - get_user returned: None
+2024-12-06 23:52:51,119 - INFO - Calling get_user with args: ('Nosir',) and kwargs: {}
+2024-12-06 23:52:51,120 - INFO - Calling connection_db with args: ("\n    select * from users where username='Nosir'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:52:51,124 - INFO - connection_db returned: []
+2024-12-06 23:52:51,125 - INFO - get_user returned: None
+2024-12-06 23:53:33,019 - INFO - Calling get_user with args: ('Nosir',) and kwargs: {}
+2024-12-06 23:53:33,021 - INFO - Calling connection_db with args: ("\n    select * from users where username='Nosir'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:53:33,024 - INFO - connection_db returned: []
+2024-12-06 23:53:33,025 - INFO - get_user returned: None
+2024-12-06 23:53:49,162 - INFO - Calling get_user with args: ('Nosir',) and kwargs: {}
+2024-12-06 23:53:49,162 - INFO - Calling connection_db with args: ("\n    select * from users where username='Nosir'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:53:49,166 - INFO - connection_db returned: []
+2024-12-06 23:53:49,166 - INFO - get_user returned: None
+2024-12-06 23:53:49,168 - INFO - Calling clean_console with args: () and kwargs: {}
+2024-12-06 23:53:49,234 - INFO - clean_console returned: None
+2024-12-06 23:54:19,653 - INFO - Calling get_user with args: ('Nosir',) and kwargs: {}
+2024-12-06 23:54:19,653 - INFO - Calling connection_db with args: ("\n    select * from users where username='Nosir'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:54:19,655 - INFO - connection_db returned: []
+2024-12-06 23:54:19,655 - INFO - get_user returned: None
+2024-12-06 23:54:19,655 - INFO - Calling clean_console with args: () and kwargs: {}
+2024-12-06 23:54:19,667 - INFO - clean_console returned: None
+2024-12-06 23:54:21,814 - INFO - Calling clean_console with args: () and kwargs: {}
+2024-12-06 23:54:21,860 - INFO - clean_console returned: None
+2024-12-06 23:54:35,293 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-06 23:54:35,293 - INFO - Calling connection_db with args: ("\n    select * from users where username='test2'\n    limit 1\n    ",) and kwargs: {}
+2024-12-06 23:54:35,293 - INFO - connection_db returned: [(2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')]
+2024-12-06 23:54:35,293 - INFO - get_user returned: (2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')
+2024-12-07 00:02:58,017 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-07 00:02:58,017 - INFO - Calling connection_db with args: ("\n    select * from users where username='test2'\n    limit 1\n    ",) and kwargs: {}
+2024-12-07 00:02:58,017 - INFO - connection_db returned: [(2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')]
+2024-12-07 00:02:58,017 - INFO - get_user returned: (2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')
+2024-12-07 00:02:59,614 - INFO - Calling get_access with args: ('test2', 'test') and kwargs: {}
+2024-12-07 00:02:59,614 - INFO - Calling get_user with args: ('test2',) and kwargs: {}
+2024-12-07 00:02:59,614 - INFO - Calling connection_db with args: ("\n    select * from users where username='test2'\n    limit 1\n    ",) and kwargs: {}
+2024-12-07 00:02:59,614 - INFO - connection_db returned: [(2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')]
+2024-12-07 00:02:59,614 - INFO - get_user returned: (2, 'test2', 'e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c')
+2024-12-07 00:02:59,614 - INFO - Calling hash_maker with args: ('test',) and kwargs: {}
+2024-12-07 00:02:59,614 - INFO - hash_maker returned: e455578dcb1f00b67cb6eb19a7b6b4a140f42869fd8790c603f1d38ab7fd578c
+2024-12-07 00:02:59,614 - INFO - get_access returned: True
+2024-12-07 00:12:29,531 - ERROR - Error in connection_db: UNIQUE constraint failed: items.name
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 22, in connection_db
+    result = cursor.execute(query).fetchall()
+sqlite3.IntegrityError: UNIQUE constraint failed: items.name
+2024-12-07 00:13:13,540 - ERROR - Error in connection_db: UNIQUE constraint failed: items.name
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 22, in connection_db
+    result = cursor.execute(query).fetchall()
+sqlite3.IntegrityError: UNIQUE constraint failed: items.name
