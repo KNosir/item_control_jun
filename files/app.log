@@ -340,3 +340,72 @@ Traceback (most recent call last):
   File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 100, in main
     while len(get_item_by_name) == 0:
 TypeError: object of type 'function' has no len()
+2024-12-07 21:14:17,141 - ERROR - Error in main: Row has incorrect number of values, (actual) 5!=4 (expected)
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 68, in main
+    table_crete.add_row(item_get)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\myvenv\lib\site-packages\prettytable\prettytable.py", line 1585, in add_row
+    raise ValueError(msg)
+ValueError: Row has incorrect number of values, (actual) 5!=4 (expected)
+2024-12-07 22:02:37,419 - ERROR - Error in check_word_in_update: 'in <string>' requires string as left operand, not int
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 83, in check_word_in_update
+    if word in k['message']['text']:
+TypeError: 'in <string>' requires string as left operand, not int
+2024-12-07 22:02:37,435 - ERROR - Error in create_user: 'in <string>' requires string as left operand, not int
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 34, in create_user
+    if check_word_in_update(otp_number):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 83, in check_word_in_update
+    if word in k['message']['text']:
+TypeError: 'in <string>' requires string as left operand, not int
+2024-12-07 22:02:37,435 - ERROR - Error in main: 'in <string>' requires string as left operand, not int
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 53, in main
+    if create_user(command):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 34, in create_user
+    if check_word_in_update(otp_number):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\utils.py", line 83, in check_word_in_update
+    if word in k['message']['text']:
+TypeError: 'in <string>' requires string as left operand, not int
+2024-12-07 22:16:39,467 - ERROR - Error in create_user: create_user() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+TypeError: create_user() takes 1 positional argument but 2 were given
+2024-12-07 22:16:39,467 - ERROR - Error in create_user: create_user() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 44, in create_user
+    if create_user(username, password):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+TypeError: create_user() takes 1 positional argument but 2 were given
+2024-12-07 22:16:39,467 - ERROR - Error in main: create_user() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 67, in main
+    if create_user(command):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\main.py", line 44, in create_user
+    if create_user(username, password):
+  File "C:\Users\Носир\OneDrive\Документы\coding folder\python\git\items_manipulation\item_control_jun\logger.py", line 18, in wrapper
+    result = func(*args, **kwargs)
+TypeError: create_user() takes 1 positional argument but 2 were given

@@ -4,6 +4,7 @@ from utils import *
 from time import sleep
 from crud import *
 from prettytable import PrettyTable
+from getpass import getpass
 
 
 @log_call
@@ -11,15 +12,66 @@ def login(command) -> bool:
     if command.isdigit() and int(command) == 1 or command.lower() == 'login':
         username = input('Please enter your username: ')
         if get_user(username) is None:
-            print('Username not found create it')
+            print('\nUsername not found create it\n')
             input('Enter any key to continue ')
             clean_console()
-        password = input('Please enter your password: ')
+            return False
+        password = getpass('Please enter your password: ')
 
         if get_access(username, password):
             return True
         else:
             False
+
+
+@log_call
+def create_user(command) -> None:
+    if command.isdigit() and int(command) == 2 or command.lower() == 'create':
+        clean_console()
+        print('For creating user you need to start bot @item_test_jun_bot and send OTP to the bot...')
+        otp_number = genarate_otp()
+        print(f'\nOTP: {otp_number}\n')
+        sleep(2)
+        while True:
+            if check_word_in_update(otp_number):
+                print('OTP is correct')
+                sleep(3)
+                remove_update_bot()
+                break
+        username = input('Please enter username: ')
+        while get_user(username) is not None:
+            username = input('Please enter username which is not exist: ')
+        password = getpass(
+            'Please enter password(your password will be hidden): ')
+        if create_user_db(username, password):
+            print('Successfully your account created...')
+            press_key()
+            clean_console()
+
+
+@log_call
+def forgot_user(command):
+    if command.isdigit() and int(command) == 3 or command.lower() == 'forget':
+        username = input('Please enter username: ')
+        while get_user(username) is None:
+            username = input('Please enter username which is exist: ')
+        # clean_console()
+        print('\nFor recovering password you need to start bot @item_test_jun_bot and send OTP to the bot...')
+        otp_number = genarate_otp()
+        print(f'\nOTP: {otp_number}\n')
+        sleep(2)
+        while True:
+            if check_word_in_update(otp_number):
+                print('OTP is correct')
+                sleep(3)
+                remove_update_bot()
+                break
+        new_password = getpass(
+            'Please enter new password(password is hidden): ')
+        if set_new_pass(username, new_password):
+            print('Successfully your password changed..')
+            press_key()
+            clean_console()
 
 
 @log_call
@@ -32,8 +84,13 @@ def main():
             sleep(1)
             # clean_console()
             break
+        # print('\n\nYou password or username is incorrect try once more.')
+        # press_key()
+        # clean_console()
+        # if it is logged no need to get access twice
+        create_user(command)
+        forgot_user(command)
 
-    # if it is logged no need to get access twice
     while True:
         print('''\n1.Create item \n2.List all items\n3.Update item\n4.Delete item ''')
         command = input("Your command(use integer or text): ")
@@ -60,8 +117,12 @@ def main():
             if create_item(item_name, item_price):
                 item_get = get_item_by_name(item_name)[0]
                 clean_console()
-                print(
-                    f'Item created successfully: \nid:{item_get[0]}\nname:{item_get[1]}\nslug:{item_get[2]}\nprice:{item_get[3]}')
+                table_crete = PrettyTable()
+                table_crete.field_names = [
+                    'id', 'name', 'slug', 'price', 'is_deleted']
+                table_crete.add_row(item_get)
+                print('Item created successfully...')
+                print(table_crete)
                 press_key()
                 clean_console()
 

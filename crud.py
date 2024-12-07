@@ -1,12 +1,38 @@
 from utils import connection_db
 from logger import log_call
+from utils import hash_maker
+
+
+@log_call
+def create_user_db(username, password):
+    query = f'''INSERT INTO users(username,password)
+        VALUES ('{username}','{hash_maker(password)}')'''
+    try:
+        connection_db(query)
+        return True
+    except:
+        return False
+
+
+@log_call
+def set_new_pass(username, new_password):
+    query = f'''
+    update items
+    set name = '{hash_maker(new_password)}'
+    where name = '{username}'
+    '''
+    try:
+        connection_db(query)
+        return True
+    except:
+        return False
 
 
 @log_call
 def create_item(item_name: str, price: int) -> bool:
     slug = item_name.replace(' ', '_')
-    query = f'''INSERT INTO items(name,slug,price)
-        VALUES ('{item_name}','{slug}',{price})'''
+    query = f'''INSERT INTO items(name,slug,price,is_deleted)
+        VALUES ('{item_name}','{slug}',{price},0)'''
     try:
         connection_db(query)
         return True
@@ -70,7 +96,7 @@ def change_item_price_by_name(item_name, new_price) -> bool:
 def delete_item_with_name(item_name) -> bool:
     query = f'''
     update items
-    set is_deleted = 0
+    set is_deleted = 1
     where name = '{item_name}'
     '''
     try:
